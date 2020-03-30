@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>OCR Corner Records</h1>
+        <!-- the login variable can be defined from an argument passed in render_template -->
+        {% if loginUser %}
+        <h3>Let's get started.</h3>
+        {% include "upload-region.html" %}
+
+        {% endif %}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        {% if imgStatus %}
+        <h3>Start OCR</h3>
+        <div class="alert alert-success">
+          <strong>Success!</strong> Indicates a successful or positive action.
+        </div>
+        {% include "slideshow.html" %}
+
+        {% endif %}
+      </div>
+    </div>
+{% endblock %}

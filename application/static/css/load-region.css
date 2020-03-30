@@ -1,0 +1,33 @@
+
+.button {
+  display: inline-block;
+  padding: 10px;
+  background: #17a2b8;
+  color: white;
+  cursor: pointer;
+  border-radius: 0px;
+  border: 1px solid #17a2b8;
+  margin: 5px;
+}
+.map-region {
+  background-color: #fff;
+  margin-left: 1%;
+}
+
+.content-header {
+  background-color: #004a80;
+  padding: 5px 0 5px 0;
+}
+
+.upload-region {
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  width: 480px;
+  font-family: sans-serif;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+.upload {
+  text-align: center;
+}

@@ -1,0 +1,33 @@
+{% block content %}
+<button id="show-pdf-button">Show PDF</button>
+
+<div id="pdf-main-container">
+	<div id="pdf-loader">Loading document ...</div>
+	<div id="pdf-contents">
+		<div id="pdf-meta">
+			<div id="page-count-container">Page <div id="pdf-current-page"></div> of <div id="pdf-total-pages"></div></div>
+		</div>
+		<canvas id="pdf-canvas" width="400"></canvas>
+		<div id="page-loader">Loading page ...</div>
+	</div>
+</div>
+
+<script>
+var getPdfDoc
+let pdfDoc
+var _CURRENT_PAGE
+var _TOTAL_PAGES
+var _PAGE_RENDERING_IN_PROGRESS = 0
+var _CANVAS = document.querySelector('#pdf-canvas');
+console.log('PDF loaded');
+
+pdfjsLib.getDocument('static/sample_pdfs/CR 2019-0976-0979-1.pdf').promise.then(pdfDoc_ => {
+  pdfDoc = pdfDoc_;
+
+  console.log('PDF loaded');
+  console.log(pdfDoc)
+});
+
+</script>
+
+{% endblock %}
